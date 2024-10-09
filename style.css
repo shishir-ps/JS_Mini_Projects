@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+
+html{
+    font-size: 10px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Comfortaa", sans-serif;
+    color: #333;
+}
+
+body {
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 90vw;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* Flex container setup */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between items */
+    gap: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Block styles */
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem;
+    text-transform: capitalize;
+    word-wrap: break-word; 
+    overflow: hidden; 
+}
+.grid-item::before {
+    content: attr(data-title); 
+    position: relative; /* Make the text sit inside the block */
+    color: white; /* Text color */
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item:active {
+    transform: scale(1);
+}
+
+/* Different block sizes */
+.grid-item.small {
+    flex: 1 1 150px; /* Minimum width of 150px */
+    height: 100px;
+}
+
+.grid-item.medium {
+    flex: 1 1 230px; /* Minimum width of 300px */
+    height: 100px;
+}
+
+.grid-item.large {
+    flex: 1 1 310px; /* Minimum width of 450px */
+    height: 100px; /* Slightly reduced */
+}
+.grid-item.big {
+    flex: 1 1 390px; /* Minimum width of 450px */
+    height: 100px; /* Slightly reduced */
+}
+.grid-item.ultra {
+    flex: 1 1 470px; /* Minimum width of 450px */
+    height: 100px; /* Slightly reduced */
+}
+
+/* Random colors for blocks */
+[data-color="red"] {
+    background-color: #e74c3c;
+}
+
+[data-color="blue"] {
+    background-color: #3498db;
+}
+
+[data-color="green"] {
+    background-color: #2ecc71;
+}
+
+[data-color="yellow"] {
+    background-color: #f1c40f;
+}
+
+[data-color="purple"] {
+    background-color: #9b59b6;
+}
+
+[data-color="orange"] {
+    background-color: #e67e22;
+}
+
+[data-color="teal"] {
+    background-color: #1abc9c;
+}
+
+[data-color="tomato"] {
+    background-color: tomato;
+}
